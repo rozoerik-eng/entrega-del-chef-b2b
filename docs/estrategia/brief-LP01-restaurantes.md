@@ -1,575 +1,623 @@
 # Brief Estratégico — LP 01
 ## Restaurantes y Cocinas Industriales
 
-**Versión:** 1.0
+**Versión:** 2.0 (revisada con materiales reales)
 **Fecha:** Junio 2026
 **Directorio de desarrollo:** `landing-restaurantes/`
-**Estado:** Aprobado para wireframe y desarrollo
+**URL objetivo:** `entregadelchef.com/restaurantes` o subdominio en Cloudflare Pages
+**Fuentes:** Manual de Marca V3 · Estrategia Google Ads B2B · Web actual entregadelchef.com · Imágenes de referencia
 
 ---
 
-## 1. Objetivo de la landing page
+## 1. Contexto estratégico (leer antes de tocar cualquier elemento)
+
+### Qué es Entrega del Chef
+Empresa colombiana (Bogotá) que fabrica y distribuye **platos listos y ultracongelados** sin conservantes, sin almidones, sin azúcares añadidos. El proceso de uso es: descongelar → calentar 10 minutos → servir. Tiene +30 SKUs en líneas de pollo, cerdo, pescado y vegetariana.
+
+### Por qué esta landing existe
+El sitio actual (entregadelchef.com, WordPress + WooCommerce) es 100% e-commerce D2C orientado al consumidor individual keto. Un gerente de restaurante que llega al sitio hoy no encuentra ningún mensaje que le hable. La estrategia Google Ads no puede funcionar sin una página B2B dedicada. **Esta landing es el destino de todos los anuncios del Grupo 1 (Restaurantes).**
+
+### Qué NO es esta página
+No es un carrito de compras. No es una tienda online. Es una página de captura de leads B2B cuyo único objetivo es que el visitante haga clic al WhatsApp y empiece una conversación de cotización.
+
+---
+
+## 2. Objetivo
 
 **Objetivo de negocio:**
-Capturar leads calificados de dueños de restaurantes, chefs ejecutivos y gerentes de operaciones que buscan un proveedor confiable de insumos gastronómicos.
+Que dueños de restaurantes, chefs y gerentes de cocina en Colombia — buscando en Google activamente — entren a conversar por WhatsApp para cotizar platos listos por volumen.
 
-**Objetivo de conversión:**
-Que el visitante deje su nombre y número de WhatsApp/teléfono para que un ejecutivo de Entrega del Chef lo contacte dentro de las siguientes 2 horas.
+**Métrica de conversión primaria:**
+Clic al botón de WhatsApp → conversación iniciada.
 
-**Métrica de éxito primaria:**
-- Tasa de conversión ≥ 4% sobre tráfico de Google Ads
-- CPL objetivo: < $150 MXN
+**Benchmarks objetivo (confirmados en estrategia de Ads):**
+- Tasa de conversión: ≥ 5% (clic → WhatsApp)
+- CPL objetivo: < $40.000 COP por conversación iniciada
+- % leads realmente B2B: > 70% de las conversaciones
 
-**Métrica secundaria:**
-- Tiempo en página ≥ 90 segundos
-- Scroll depth ≥ 70% de los visitantes
-
-**No es objetivo de esta página:**
-- Vender en línea (e-commerce)
-- Explicar toda la empresa
-- Comunicar los tres segmentos (solo restaurantes)
+**Número de WhatsApp:** +57 319 6583037
+**URL de WhatsApp con mensaje pre-cargado:**
+```
+https://wa.me/573196583037?text=Hola%2C+soy+de+un+restaurante+y+quiero+cotizar+pedidos+al+por+mayor.
+```
 
 ---
 
-## 2. Audiencia objetivo
+## 3. Audiencia objetivo
 
-### Perfil primario (60% del tráfico esperado)
+### Perfil primario (60% del tráfico)
 
-**"El dueño-operador frustrado"**
-- Dueño de 1 a 3 restaurantes
-- 35 a 52 años
-- Lleva el negocio día a día, conoce cada detalle de la cocina
-- Su proveedor actual lo ha fallado al menos una vez este mes
-- Busca en Google en la mañana (7-9am antes del servicio) o de noche (10pm-12am después del cierre)
-- Usa el teléfono móvil para hacer la búsqueda
-- Quiere una solución rápida, no leer un ensayo
+**"El dueño-operador con problema de personal"**
+- Dueño de 1-3 restaurantes en Bogotá o ciudades principales
+- 35-52 años, opera el negocio día a día
+- Su problema inmediato: el cocinero falló, el plato no sale consistente, la nómina de cocina destruye el margen
+- Busca en Google desde el teléfono en horario de mañana o tarde noche
+- Intención: ya decidió que necesita una solución, busca alternativas al status quo
 
-**Intención de búsqueda:** Busca en modo problema ("proveedor de alimentos para restaurante confiable") o modo comparación ("mejores distribuidores de insumos"). Ya decidió que necesita cambiar o añadir un proveedor.
+**Palabras clave por las que llega (del documento de estrategia):**
+- `"proveedor comida congelada para restaurantes bogotá"`
+- `"alimentos ultracongelados para restaurantes"`
+- `"comida preparada congelada al por mayor bogotá"`
+- `"proveedor platos listos para restaurantes"`
+- `"alimentos sin chef especializado restaurante"`
+- `"reducir costos operativos cocina restaurante"`
 
-### Perfil secundario (30% del tráfico esperado)
+### Perfil secundario (30% del tráfico)
 
-**"El chef con poder de compra"**
-- Chef ejecutivo o sous chef en restaurante de 100+ cubiertos
-- 28 a 45 años
-- Responsable de la calidad del insumo
-- Le frustra recibir producto que no cumple la especificación
-- Valora más la calidad y consistencia que el precio mínimo
-- Busca en Google durante su día libre o en las horas tranquilas antes del servicio de comida
+**"El chef ejecutivo que quiere optimizar"**
+- Chef o gerente de cocina en restaurante de 100+ cubiertos
+- 28-45 años, busca complementar carta con platos listos de alta calidad
+- Valora que el producto sea sin conservantes (no "congelado de supermercado")
+- Busca durante su día libre o en las horas quietas antes del servicio
 
-### Perfil terciario (10% del tráfico esperado)
+### Perfil terciario (10% del tráfico)
 
 **"El gerente de cocina industrial"**
-- Opera cocina de hospital, universidad, empresa o comedor corporativo
-- Volúmenes más altos, proceso de compra más formal
-- Busca proveedor que pueda crecer con él y facturar correctamente
+- Opera cocina de comedor corporativo, universidad u hospital
+- Necesita volúmenes altos, factura electrónica, proveedor formal
+- Ciclo de compra más largo pero ticket más alto
 
 ---
 
-## 3. Mapa de la página — Secciones y su función
+## 4. Branding aplicado a esta landing
 
-La landing tiene exactamente **8 secciones funcionales** más el header y footer. Cada sección tiene una función de conversión específica.
+### Colores
+```css
+/* Paleta oficial — Manual de Marca V3 */
+--verde-principal:     #559C33;   /* Fondo hero, botones primarios, header */
+--verde-medio:         #89B15F;   /* Fondos secundarios, íconos */
+--verde-claro:         #DAE4CB;   /* Fondos de secciones alternadas */
+--naranja-acento:      #F59B1A;   /* CTAs principales, números grandes, énfasis */
+--naranja-claro:       #FEE7CB;   /* Badges, tags, fondos de destacados */
+--negro:               #000000;   /* Texto principal */
+--blanco:              #FFFFFF;   /* Texto sobre verde, fondos limpios */
+```
+
+### Aplicación de color por sección
+- **Header y hero:** fondo verde `#559C33`, texto e ícono del logo en blanco
+- **Botones WhatsApp:** fondo naranja `#F59B1A`, texto blanco
+- **Secciones de contenido:** alternancia entre blanco y verde claro `#DAE4CB`
+- **Números de impacto:** naranja `#F59B1A`, tamaño grande
+- **Footer:** fondo negro `#000000`, texto blanco
+
+### Tipografía web (equivalente a Myriad Pro)
+- **Headlines:** Barlow Condensed Bold o Oswald Bold (Google Fonts)
+- **Subheadlines:** Barlow Condensed Regular o Oswald Regular
+- **Cuerpo de texto:** Inter o Open Sans, 16-18px, color negro
+
+### Logo
+Usar versión blanca del logo sobre fondo verde `#559C33` en el header.
+El ícono es el sombrero de chef + cloche, estilo outline en blanco.
+
+---
+
+## 5. Mapa de secciones
 
 ```
-┌─────────────────────────────────────────┐
-│  HEADER MINIMAL (logo + CTA WhatsApp)   │
-├─────────────────────────────────────────┤
-│  S1 — HERO (atención + propuesta valor) │
-├─────────────────────────────────────────┤
-│  S2 — DOLORES (reconocimiento del       │
-│        problema)                        │
-├─────────────────────────────────────────┤
-│  S3 — SOLUCIÓN (cómo Entrega del Chef   │
-│        resuelve los dolores)            │
-├─────────────────────────────────────────┤
-│  S4 — CÓMO FUNCIONA (proceso en 3       │
-│        pasos, reduce incertidumbre)     │
-├─────────────────────────────────────────┤
-│  S5 — BENEFICIOS ECONÓMICOS Y           │
-│        OPERATIVOS                       │
-├─────────────────────────────────────────┤
-│  S6 — PRUEBA SOCIAL (testimonios +      │
-│        número de clientes)              │
-├─────────────────────────────────────────┤
-│  S7 — FORMULARIO / CTA PRINCIPAL        │
-│        (captura de lead)                │
-├─────────────────────────────────────────┤
-│  S8 — FAQ (objeciones + SEO)            │
-├─────────────────────────────────────────┤
-│  FOOTER MINIMAL (datos de contacto,     │
-│  aviso de privacidad)                   │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│  HEADER sticky                              │
+│  Logo blanco | CTA: "Cotizar por WhatsApp"  │
+├─────────────────────────────────────────────┤
+│  S1 — HERO                                  │
+│  Headline + subheadline + CTA WhatsApp      │
+│  Imagen: producto en entorno de cocina      │
+├─────────────────────────────────────────────┤
+│  S2 — DOLORES                               │
+│  "¿Esto te suena familiar?"                 │
+│  4 tarjetas con problemas reales            │
+├─────────────────────────────────────────────┤
+│  S3 — SOLUCIÓN                              │
+│  "Así funciona Entrega del Chef"            │
+│  Proceso 3 pasos adaptado a B2B             │
+├─────────────────────────────────────────────┤
+│  S4 — PRODUCTO                              │
+│  "+30 platos listos para tu restaurante"    │
+│  Grid de líneas de producto con fotos       │
+├─────────────────────────────────────────────┤
+│  S5 — BENEFICIOS                            │
+│  Argumentos económicos y operativos         │
+├─────────────────────────────────────────────┤
+│  S6 — PRUEBA SOCIAL                         │
+│  Testimonios B2B + indicadores cuantificados│
+├─────────────────────────────────────────────┤
+│  S7 — CTA PRINCIPAL                         │
+│  Botón WhatsApp + número visible + garantía │
+├─────────────────────────────────────────────┤
+│  S8 — FAQ                                   │
+│  Objeciones resueltas (SEO + CRO)           │
+├─────────────────────────────────────────────┤
+│  FOOTER                                     │
+│  Datos de contacto + aviso de privacidad    │
+└─────────────────────────────────────────────┘
 ```
 
 ---
 
-## 4. Especificación detallada por sección
+## 6. Especificación detallada por sección
 
 ### HEADER
 
-**Función:** Anclar la marca y dar acceso inmediato a contacto sin bloquear la lectura del hero.
-
 **Elementos:**
-- Logo Entrega del Chef (izquierda)
-- Un solo CTA (derecha): "Hablar por WhatsApp" → botón verde con ícono de WhatsApp
-- Header sticky (se queda al hacer scroll)
-- Sin menú de navegación (evita distracción y fuga de leads)
+- Logo Entrega del Chef (versión blanca, izq.)
+- Fondo: verde `#559C33`
+- CTA único (der.): botón naranja `#F59B1A` → "Cotizar por WhatsApp" → abre WhatsApp
+- Sticky (fijo al hacer scroll)
+- Sin menú de navegación
 
-**Principio:** El header de una landing de performance no es el header de un sitio web. No tiene menú.
+**Principio:** La landing de performance no tiene menú. Cada link que lleva a otro lugar es un lead que se pierde.
 
 ---
 
 ### S1 — HERO
 
-**Función:** Capturar la atención en los primeros 3 segundos. Hacer que el visitante diga "esto es para mí".
+**Función:** Capturar la atención en 3 segundos. El visitante debe pensar "esto es exactamente lo que necesito."
 
-**Headline principal (opción A — enfoque en problema):**
-> "Tu proveedor de insumos te volvió a fallar."
+**Headline (versión A — enfoque en el problema operativo):**
+> "Sirve platos de calidad. Sin depender de un chef."
 
-**Headline principal (opción B — enfoque en promesa):**
-> "El proveedor de insumos que tu cocina merece. Siempre a tiempo."
+**Headline (versión B — enfoque en el beneficio principal):**
+> "Platos listos en 10 minutos para tu restaurante. Sin conservantes."
 
-**Recomendación:** Hacer A/B test entre ambos. La opción A tiene más fuerza emocional; la opción B comunica el beneficio directo.
+**Hacer A/B test.** La opción A tiene mayor tensión emocional (problema); la B comunica directamente el diferenciador.
 
 **Subheadline:**
-> "Entrega del Chef lleva carnes, lácteos, frutas, verduras y más directo a tu cocina — con la puntualidad y calidad que un restaurante profesional exige."
+> "Entrega del Chef suministra platos ultracongelados listos para servir — pollo, cerdo, pescado y más — directamente a tu restaurante. Porciones estandarizadas, sin almidones, sin azúcares añadidos."
 
-**CTA principal del hero:**
-- Texto: "Solicitar mi primera entrega"
-- Acción: Scroll hasta formulario o abrir modal de captura
-- Diseño: Botón grande, color de acento de marca, visible sin scroll en móvil
+**CTA principal:**
+- Texto: "Cotizar para mi restaurante →"
+- Color: naranja `#F59B1A`
+- Acción: abrir WhatsApp con mensaje pre-cargado B2B
+- Tamaño: grande, clickeable en móvil con pulgar
 
-**CTA secundario (opcional):**
-- Texto: "Ver catálogo de productos" → link a sección de solución o PDF del catálogo
-- Diseño: Texto con flecha, menos prominente que el primario
+**Imagen del hero:**
+- Prioridad 1: foto real de producto Entrega del Chef en bandeja o empaque institucional (no el empaque al vacío D2C individual)
+- Prioridad 2: foto de cocina profesional activa con uno de sus platos en preparación
+- Prioridad 3: foto del producto ya servido en plato de restaurante
+- Evitar absolutamente: imágenes de banco con chefs posando en cocinas perfectas
 
-**Elemento visual del hero:**
-- Foto o imagen de una cocina profesional activa (no vacía)
-- Alternativa: foto del momento de entrega en cocina (caja con productos + manos de chef revisando)
-- Evitar: imágenes de banco de imágenes genéricas con chefs posando en cocinas blancas perfectas
-- Prioridad: imagen propia o de un cliente real = credibilidad inmediata
+**Indicadores de confianza debajo del CTA (barra horizontal):**
+```
+[✓ Sin conservantes]  [✓ Listo en 10 minutos]  [✓ Cadena de frío]  [✓ Factura electrónica]
+```
 
-**Indicador de confianza bajo el CTA:**
-- "Más de 200 restaurantes confían en nosotros" (ajustar número real)
-- "Primera entrega en 48 horas" 
-- "Sin contratos de permanencia"
-
-**Consideraciones técnicas del hero:**
-- La imagen debe estar en formato WebP, optimizada para LCP < 2.5 segundos
-- En móvil: el headline, subheadline y CTA deben ser visibles sin scroll (above the fold)
-- Altura del hero en desktop: 85-100vh
-- Altura del hero en móvil: contenido completo sin scroll forzoso
+**Consideraciones técnicas:**
+- Imagen en formato WebP, < 200KB, LCP < 2.5s
+- En móvil: headline (32px), subheadline (16px) y CTA visible sin scroll
+- Fondo: verde `#559C33` o imagen de fondo semitransparente
 
 ---
 
-### S2 — DOLORES (Reconocimiento del problema)
+### S2 — DOLORES
 
-**Función:** Hacer que el visitante sienta que lo entienden. Crear resonancia emocional con su situación real.
+**Función:** Resonancia emocional. El visitante siente que lo entienden.
 
-**Encabezado de sección:**
-> "¿Te suena familiar alguno de estos problemas?"
+**Encabezado:** "¿Alguno de estos problemas te suena familiar?"
 
-**Los 4 dolores principales a mostrar (en formato visual, no lista de texto):**
+**Las 4 tarjetas de dolor:**
 
-**D1:** "Tu proveedor llegó tarde (otra vez) y tuviste que cambiar el menú de último momento."
+**Tarjeta 1 — Personal:**
+Ícono: persona con X
+"Tu cocinero no llegó y el servicio empieza en 2 horas."
 
-**D2:** "Coordinás con 6 proveedores distintos y cada semana hay un problema diferente."
+**Tarjeta 2 — Inconsistencia:**
+Ícono: platos diferentes
+"El mismo plato sale diferente según quién esté en cocina."
 
-**D3:** "El producto llegó, pero no con la calidad que pediste. Y pedir reposición es un calvario."
+**Tarjeta 3 — Costo:**
+Ícono: calculadora / dinero
+"Tu margen se va en nómina de cocineros para tener 5 platos en el menú."
 
-**D4:** "No tenés claro cuánto gastás en insumos cada mes. El costeo de tus platillos es una estimación."
+**Tarjeta 4 — Merma:**
+Ícono: contenedor / basura
+"Compraste materia prima. Sobró el 30%. Ya no sirve. Pérdida directa."
 
-**Formato visual sugerido:**
-- 4 tarjetas (cards) con ícono ilustrativo + texto corto
-- Fondo ligeramente diferenciado del hero (puede ser gris muy suave o color complementario de la marca)
-- En móvil: scroll horizontal o stack vertical de cards
+**Formato:** 4 cards en grid 2x2 (desktop) / stack (móvil). Fondo verde claro `#DAE4CB`, ícono en verde `#559C33`, texto negro.
 
-**Transición hacia S3:**
-Una frase puente que lleva al visitante de reconocer el problema a descubrir la solución:
-> "Entrega del Chef existe para que estos problemas sean cosa del pasado."
-
----
-
-### S3 — SOLUCIÓN (Cómo Entrega del Chef lo resuelve)
-
-**Función:** Presentar la propuesta de valor de forma clara y creíble. Conectar cada dolor con un diferenciador específico.
-
-**Encabezado de sección:**
-> "Un solo proveedor. Todo lo que tu cocina necesita."
-
-**Diferenciadores a comunicar (máximo 5):**
-
-**Dif. 1 — Puntualidad garantizada**
-"Entregamos en la ventana de tiempo acordada. Si fallamos, te lo compensamos."
-→ Ícono: reloj o rayo
-
-**Dif. 2 — Catálogo completo**
-"Carnes, lácteos, frutas y verduras, abarrotes, congelados y más. Un solo pedido."
-→ Ícono: caja o lista de productos
-
-**Dif. 3 — Calidad consistente**
-"Los mismos estándares semana a semana. Nada de sorpresas desagradables al abrir la caja."
-→ Ícono: estrella o paloma de calidad
-
-**Dif. 4 — Pedidos digitales**
-"Haz tu pedido desde tu teléfono en cualquier momento. Historial, facturas y todo en un solo lugar."
-→ Ícono: teléfono o app
-
-**Dif. 5 — Ejecutivo dedicado**
-"Un número. Una persona que conoce tu cocina y responde cuando la necesitas."
-→ Ícono: auricular o persona
-
-**Formato visual:**
-- Grid de 2 o 3 columnas en desktop, stack en móvil
-- Ícono + título en negrita + descripción corta (2 líneas máximo)
+**Transición:** "Entrega del Chef existe para que ninguno de estos sea tu problema mañana."
 
 ---
 
-### S4 — CÓMO FUNCIONA (Proceso en 3 pasos)
+### S3 — CÓMO FUNCIONA (SOLUCIÓN)
 
-**Función:** Reducir la incertidumbre del "¿qué pasa después de que lleno el formulario?". Hacer el proceso transparente y no intimidante.
+**Función:** Claridad total sobre el producto y su uso en cocina profesional. Reducir incertidumbre.
 
-**Encabezado de sección:**
-> "Empezar es más fácil de lo que crees"
+**Encabezado:** "Más sencillo de lo que imaginas"
 
-**Paso 1:**
-**"Solicita tu cotización"**
-"Llena el formulario o escríbenos por WhatsApp. En menos de 2 horas te contactamos."
-→ Ícono: formulario o mensaje
+**Proceso en 3 pasos (adaptado a B2B):**
 
-**Paso 2:**
-**"Diseñamos tu pedido"**
-"Un ejecutivo te asesora para armar la lista de insumos que tu operación necesita."
-→ Ícono: lista con palomita
+**Paso 1 — Cotiza y pide**
+"Escríbenos por WhatsApp. En menos de 2 horas te confirmamos disponibilidad y precio por volumen."
+Ícono: teléfono con WhatsApp / mensaje
 
-**Paso 3:**
-**"Tu primera entrega en 48 horas"**
-"Recibís tus insumos directamente en tu cocina. Revisás la calidad. Si todo está bien, empezamos a trabajar juntos."
-→ Ícono: camión de entrega
+**Paso 2 — Recibe en tu cocina**
+"Entrega directa a tu restaurante. Producto ultracongelado, empacado al vacío, cadena de frío garantizada."
+Ícono: caja de entrega / camión
 
-**Elemento de confianza:**
-Bajo los pasos, agregar: "Sin contratos forzosos. Sin cuotas de inscripción. Prueba sin riesgo."
+**Paso 3 — Sirve en 10 minutos**
+"Calienta. No cocines. Cada plato sale igual, siempre, sin importar quién esté en el turno."
+Ícono: sartén / reloj
+
+**Bajo el proceso:**
+> "Sin contratos forzosos. Sin cuota de inscripción. Solicita tu primera entrega y prueba el producto."
+
+**Color de sección:** Fondo blanco, íconos y números en naranja `#F59B1A`.
 
 ---
 
-### S5 — BENEFICIOS ECONÓMICOS Y OPERATIVOS
+### S4 — PRODUCTO
 
-**Función:** Dar al dueño-operador los argumentos concretos para justificar el cambio de proveedor.
+**Función:** Mostrar la amplitud del catálogo. Que el visitante vea que hay variedad suficiente para su menú.
 
-**Encabezado de sección:**
-> "Lo que gana tu negocio al trabajar con nosotros"
+**Encabezado:** "+30 platos listos para servir en tu restaurante"
 
-**Beneficios a presentar (elegir 4-6 según espacio):**
+**Subheadline:** "Sin conservantes · Sin almidones · Sin azúcares añadidos · Compatibles con menús saludables y keto"
 
-| Beneficio | Descripción |
-|-----------|-------------|
-| Reducción de merma | Insumos de calidad consistente = menos producto tirado = menor costo real |
-| Ahorro de tiempo | De 7 llamadas a 1 pedido. Recupera horas de tu semana |
-| Costeo preciso | Precios predecibles = margen controlado = menú bien costeado |
-| Mejor flujo de caja | Condiciones de crédito B2B disponibles |
-| Sin viajes de emergencia | Cuando el proveedor cumple, tú no tienes que improvisar |
-| Escalabilidad | Crece tu negocio sin cambiar de proveedor |
+**Líneas de producto a mostrar (basadas en el sitio actual):**
 
-**Formato visual:**
-- Formato de lista con íconos o tabla limpia
-- Considerar estadísticas o estimaciones: "Los restaurantes que trabajan con nosotros reportan hasta 15% de reducción en costos de insumos"
+**Línea Pollo**
+- Texto: "Múltiples recetas de pollo preparado y congelado al vacío"
+- Foto: imagen del producto en empaque institucional o servido
+
+**Línea Cerdo y Pescado**
+- Ejemplos confirmados: Costillas de cerdo con salsa BBQ · Cerdo desmechado con hojas · Pescado meunière
+- Foto: plato servido
+
+**Línea Vegetariana**
+- Texto: "Opciones plant-based listas para ampliar tu oferta"
+- Foto: plato vegetariano
+
+**Repostería**
+- Texto: "Para desayunos, snacks y opciones de postre sin complicación"
+- Foto: producto de repostería
+
+**CTA en sección:**
+Botón naranja: "Ver catálogo completo por WhatsApp →"
+→ Abre WhatsApp con: `"Hola, quiero ver el catálogo completo para mi restaurante."`
+
+**Nota de implementación:**
+Al recibir el catálogo en formato digital, usar las fotos reales de los productos. Evitar fotos de stock. Las fotos de productos del sitio actual (https://entregadelchef.com) son las referencias visuales a usar.
+
+---
+
+### S5 — BENEFICIOS
+
+**Función:** Argumentos de ROI para que el dueño-operador justifique el cambio ante sí mismo.
+
+**Encabezado:** "Lo que gana tu restaurante"
+
+**6 beneficios a mostrar (formato íconos + cifras cuando aplique):**
+
+| # | Beneficio | Copy |
+|---|-----------|------|
+| 1 | Hasta 40% menos en costo de mano de obra por plato | "Sin técnica de cocina avanzada requerida para servir platos complejos" |
+| 2 | Cero merma | "Compras lo que necesitas. Congelas el resto. No botás nada." |
+| 3 | Consistencia garantizada | "Mismo sabor. Mismas porciones. Siempre. Sin depender del turno." |
+| 4 | Menú ampliado sin contratar | "Ofrece cerdo desmechado, pescado meunière y más sin un chef especializado" |
+| 5 | Opción saludable en tu carta | "Sin conservantes, sin azúcares. La opción keto que tus clientes piden." |
+| 6 | Listo en 10 minutos | "Velocidad de servicio en hora pico sin sacrificar calidad" |
+
+**Formato:** Grid 2x3 (desktop) / stack (móvil). Número grande en naranja `#F59B1A` + texto descriptivo.
 
 ---
 
 ### S6 — PRUEBA SOCIAL
 
-**Función:** Es la sección más importante para vencer la objeción de confianza. Un visitante que no confía, no convierte.
+**Función:** La sección más importante para vencer la desconfianza. Un lead que no confía, no convierte.
 
-**Encabezado de sección:**
-> "Restaurantes que ya dejaron de preocuparse por sus insumos"
+**Encabezado:** "Restaurantes que ya sirven platos Entrega del Chef"
 
-#### Sub-sección A — Indicadores de confianza cuantificados
-
-Mostrar en formato visualmente llamativo (números grandes):
+#### Sub-sección A — Números de impacto
 
 ```
-[200+]                [5 años]              [48h]
-Restaurantes activos  De experiencia        Primera entrega
+[  5+  ]          [  +30  ]         [  10   ]
+Años en el mercado  Platos disponibles  Minutos para servir
 ```
-*(Ajustar todos los números a los datos reales del negocio)*
+*(Ajustar "5+ años" según fecha de fundación real: 2021 = 4-5 años)*
 
-#### Sub-sección B — Testimonios
+#### Sub-sección B — Testimonios B2B
 
-**Formato recomendado para cada testimonio:**
-- Foto del cliente (o del restaurante) — la autenticidad importa mucho
-- Nombre del cliente + nombre del restaurante + ciudad
-- Cita de 2-4 líneas enfocada en UN beneficio específico
+**IMPORTANTE:** Los testimonios actuales del sitio (Ximena Neira, Roberto Zarama, Natalia Mejía) son 100% C2C keto. NO usar en esta landing. Solicitar al cliente testimonios de restauranteros reales.
 
-**Testimonio ideal #1 — Enfoque en confiabilidad:**
-> "Llevaba años cambiando de proveedor cada 3 meses. Con Entrega del Chef llevo ya [X tiempo] y nunca me han fallado en una entrega."
-> — [Nombre], Chef ejecutivo de [Restaurante], [Ciudad]
+**Formato ideal para cada testimonio:**
+- Foto del restaurante o del dueño/chef
+- Nombre completo + nombre del restaurante + ciudad
+- Cita de 2-3 líneas enfocada en 1 beneficio concreto B2B
 
-**Testimonio ideal #2 — Enfoque en tiempo ahorrado:**
-> "Antes pasaba mis mañanas coordinando 6 proveedores. Ahora hago un solo pedido y me enfoco en la cocina."
-> — [Nombre], Dueño de [Restaurante], [Ciudad]
+**Testimonio tipo A — Sobre consistencia:**
+> "Desde que usamos Entrega del Chef en el cerdo desmechado, el plato sale igual en todos los turnos. Antes dependía de quién cocinara."
+> — [Nombre], Dueño de [Restaurante], Bogotá
 
-**Testimonio ideal #3 — Enfoque en calidad:**
-> "La consistencia en la calidad de la carne cambia todo. Mis platillos salen igual todos los días."
-> — [Nombre], Chef de [Restaurante], [Ciudad]
+**Testimonio tipo B — Sobre costo operativo:**
+> "Redujimos la dependencia de cocineros especializados y el margen en esos platos mejoró. El producto llegó a tiempo y la calidad es consistente."
+> — [Nombre], Chef Ejecutivo, [Restaurante], [Ciudad]
 
-**Nota de implementación:**
-Si no hay testimonios reales al momento del lanzamiento, usar el indicador cuantificado + un testimonio con foto real de un cliente que haya dado permiso. Nunca usar fotos de stock como testimonios.
+**Testimonio tipo C — Sobre la opción saludable:**
+> "Nuestros clientes pedían opciones keto. Con Entrega del Chef los añadimos al menú sin cambiar nada en la cocina."
+> — [Nombre], Gerente, [Restaurante], [Ciudad]
 
-#### Sub-sección C — Logos de clientes (opcional)
-
-Si hay permiso de los clientes: mostrar 6-10 logos de restaurantes conocidos en la zona de cobertura. Si no hay permiso: omitir esta sub-sección y fortalecer los testimonios de texto.
+**Si no hay testimonios B2B disponibles al lanzamiento:**
+Usar solo los números de impacto + una cita del fundador sobre el estándar de calidad para negocios. No usar testimonios C2C en la landing B2B.
 
 ---
 
-### S7 — FORMULARIO / CTA PRINCIPAL
+### S7 — CTA PRINCIPAL
 
-**Función:** La razón de existencia de toda la landing. Capturar el dato de contacto del lead.
+**Función:** La razón de existencia de toda la landing.
 
-**Encabezado del formulario:**
-> "Solicita tu cotización sin compromiso"
+**Encabezado:** "¿Listo para simplificar tu cocina?"
 
-**Subtexto:**
-> "Un ejecutivo te llama en menos de 2 horas en horario de oficina."
+**Subheadline:** "Escríbenos ahora y recibe tu primera cotización en menos de 2 horas."
 
-**Campos del formulario (mínimo viable):**
+**Botón principal (grande, ancho completo en móvil):**
+```
+💬  Cotizar por WhatsApp
+```
+Color fondo: naranja `#F59B1A`
+Color texto: blanco
+Tamaño: mínimo 56px de altura, texto 18px
 
-| Campo | Tipo | Requerido |
-|-------|------|-----------|
-| Nombre completo | Texto | Sí |
-| WhatsApp / Teléfono | Número | Sí |
-| Nombre del restaurante | Texto | Sí |
-| Email | Email | No (opcional) |
-| ¿Cuántos días a la semana operas? | Selección | No |
+**Alternativa de contacto:**
+```
+📞  O llámanos: +57 319 6583037
+```
 
-**Principio:** Pedir solo lo estrictamente necesario para hacer el primer contacto comercial. Cada campo adicional reduce la tasa de conversión.
+**Mensaje pre-cargado en WhatsApp (fuerza el filtro B2B desde el primer mensaje):**
+```
+Hola, soy [nombre] de [restaurante/negocio] en [ciudad] y quiero conocer sus condiciones 
+para pedidos de platos congelados al por mayor.
+```
 
-**Texto del botón de envío:**
-> "Quiero mi cotización →"
+**Texto de confianza debajo del botón:**
+> "Atendemos exclusivamente a restaurantes, hoteles, empresas de catering y distribuidores."
+> "Sin contratos de permanencia. Sin costos de inscripción."
 
-**Texto alternativo para botón:** "Hablar con un ejecutivo"
-
-**Bajo el formulario:**
-- Candado + "Tu información es confidencial y no se comparte con terceros"
-- "Sin contratos forzosos. Sin costo de inscripción."
-
-**Versión móvil del CTA:**
-Además del formulario, botón de WhatsApp directo:
-> "O escríbenos directo por WhatsApp →" [Botón verde]
-
-**Estado de confirmación (post-envío):**
-Página o modal de agradecimiento con:
-- Mensaje: "¡Listo! Recibimos tu solicitud."
-- Expectativa: "Un ejecutivo te contactará en las próximas 2 horas."
-- Siguiente paso sugerido: "Mientras tanto, descarga nuestro catálogo de productos" (opcional)
+**Nota CRO:** No usar formulario de email como CTA principal. La estrategia define WhatsApp como conversión principal. Si se quiere captura de email como respaldo, usar un campo opcional secundario muy discreto.
 
 ---
 
 ### S8 — FAQ
 
-**Función dual:**
-1. **CRO:** Resolver las objeciones que impiden la conversión
-2. **SEO:** Capturar búsquedas de cola larga con schema FAQPage
+**Función dual:** Resolver objeciones (CRO) + posicionar en búsquedas long-tail (SEO con schema FAQPage).
 
-**Encabezado de sección:**
-> "Preguntas frecuentes"
+**Encabezado:** "Preguntas frecuentes"
 
-**Preguntas y respuestas:**
+**8 preguntas y respuestas:**
 
-**P1: ¿Cuál es el pedido mínimo?**
-R: "Nuestro pedido mínimo está diseñado para adaptarse a restaurantes de todos los tamaños. Contáctanos para darte la información específica según tu volumen de operación." *(Ajustar con dato real)*
+**P1: ¿Son realmente platos sin conservantes?**
+R: "Sí. Toda nuestra línea de carnes listas está elaborada sin conservantes, sin almidones y sin azúcares añadidos. Son productos cocidos, congelados y empacados al vacío — la conservación es por frío, no por químicos."
 
-**P2: ¿En qué zonas hacen entregas?**
-R: "Actualmente tenemos cobertura en [zonas/ciudades]. Escríbenos para confirmar si llegamos a tu dirección." *(Ajustar con cobertura real)*
+**P2: ¿Cómo sé que la calidad es buena si son congelados?**
+R: "El ultracongelado es la técnica que usan los mejores restaurantes del mundo para mantener calidad. Nuestros platos se congelan inmediatamente después de su preparación para preservar textura y sabor. El resultado en el plato es el mismo de siempre."
 
-**P3: ¿Qué pasa si el producto llega en mal estado?**
-R: "Lo reponemos sin costo y sin burocracia. La calidad es nuestra responsabilidad desde que sale nuestro almacén hasta que llega a tu cocina."
+**P3: ¿Cuánto tarda el primer pedido en llegar?**
+R: "Una vez cotizado y confirmado el primer pedido, hacemos la entrega según nuestra ruta en tu zona. Escríbenos por WhatsApp y te confirmamos el tiempo exacto para tu ubicación en Bogotá."
 
-**P4: ¿Tienen crédito o debo pagar de contado?**
-R: "Ofrecemos condiciones de crédito B2B una vez establecida la relación comercial. Al inicio manejamos pago contra entrega o transferencia previa. Platícanos tu caso."
+**P4: ¿Tienen pedido mínimo?**
+R: "Sí. Trabajamos con pedidos mínimos por volumen para asegurar la eficiencia logística. Escríbenos para darte la información específica según el tipo de negocio y los platos que te interesan."
 
-**P5: ¿Qué productos manejan?**
-R: "Manejamos carnes, lácteos, frutas y verduras, abarrotes, congelados y más. El catálogo completo está disponible para ti — solicítalo al contactarnos."
+**P5: ¿Cuántos platos distintos tienen disponibles?**
+R: "Más de 30 platos en líneas de pollo, cerdo, pescado y vegetariana. También manejamos repostería. Escríbenos y te enviamos el catálogo completo con disponibilidad actual."
 
-**P6: ¿Cuánto tiempo tarda la primera entrega?**
-R: "Una vez aprobado tu primer pedido, hacemos la entrega en un plazo de 48 horas hábiles."
+**P6: ¿Hacen entrega fuera de Bogotá?**
+R: "Tenemos cobertura en Colombia. Escríbenos con tu ciudad para confirmar disponibilidad y costos de envío a tu ubicación."
 
-**P7: ¿Necesito firmar contrato?**
-R: "No. Trabajamos con pedidos individuales. Puedes hacer una prueba sin ningún compromiso de permanencia."
+**P7: ¿Dan factura electrónica?**
+R: "Sí. Emitimos factura electrónica para tu operación comercial."
 
-**Formato visual:**
-- Acordeón (accordion) expandible
-- Máximo 7-8 preguntas
-- Implementar schema `FAQPage` en JSON-LD para SEO
+**P8: ¿Tienen platos compatibles con menús saludables o keto?**
+R: "Toda nuestra línea está elaborada sin azúcares añadidos, sin almidones y sin conservantes. Son compatibles con menús keto, low-carb y libre de ultraprocesados — una ventaja competitiva para restaurantes que quieren ofrecer opciones saludables sin complejidad en cocina."
+
+**Implementar schema JSON-LD tipo FAQPage para todas las preguntas.**
 
 ---
 
 ### FOOTER
 
-**Función:** Dar datos de contacto oficiales y cumplir con obligaciones legales sin distraer del objetivo de conversión.
-
-**Elementos:**
-- Logo Entrega del Chef
-- Teléfono / WhatsApp de contacto
-- Email de contacto
-- Dirección fiscal (si aplica y es relevante para la credibilidad)
+**Elementos obligatorios:**
+- Logo Entrega del Chef (versión verde sobre blanco)
+- WhatsApp: +57 319 6583037 (clic directo)
+- Email: info@entregadelchef.com
+- Dirección: Calle 77 # 69R - 16, Bogotá - Colombia
 - Link: Aviso de Privacidad
 - Copyright: © 2026 Entrega del Chef
 
-**Lo que NO va en el footer de una landing de performance:**
-- Links a redes sociales (fuga de tráfico)
-- Menú de navegación extenso
-- Mapa de sitio
+**NO incluir en footer de landing B2B:**
+- Links a redes sociales (fuga de tráfico hacia perfiles C2C keto)
+- Menú de navegación hacia la tienda online D2C
+- Link a "Tienda" o "Mis Pedidos" del WooCommerce
 
 ---
 
-## 5. CTA flotante (elemento persistente)
+## 7. CTA flotante (elemento persistente)
 
-**En móvil:** Barra inferior fija con dos opciones:
+**En móvil:** Barra inferior fija permanente:
 ```
-[  📞 Llamar  ] [  💬 WhatsApp  ]
+┌────────────────────────────────────────────────┐
+│  💬  Cotizar por WhatsApp     📞  Llamar       │
+└────────────────────────────────────────────────┘
 ```
+Fondo naranja `#F59B1A`, texto blanco.
 
-**En desktop:** Botón flotante de WhatsApp en esquina inferior derecha (estilo FAB).
+**En desktop:** Botón flotante de WhatsApp (FAB) en esquina inferior derecha.
 
-**Comportamiento:** Aparece después de que el usuario hace scroll más allá del hero (scroll depth > 20%).
-
----
-
-## 6. Decisiones de diseño estratégicas
-
-### Paleta visual
-- Usar paleta oficial del branding (pendiente de recibir guía)
-- Recomendación de dirección: Colores que transmitan profesionalismo, confianza y frescura de producto alimenticio
-- Evitar: paletas que remitan a fast food o supermercado masivo
-
-### Tipografía
-- Usar tipografías del branding oficial
-- Jerarquía clara: H1 (48-64px desktop / 32-40px móvil), H2 (32-40px / 24-28px), Body (16-18px)
-
-### Fotografía
-- Prioridad 1: Imágenes reales de la operación (entregas, productos, equipo)
-- Prioridad 2: Fotografía profesional de productos del catálogo
-- Prioridad 3: Imágenes de cocinas profesionales reales (no stock genérico)
-- Prohibido: Imágenes de banco de imágenes con personas en traje de chef posando
-
-### Iconografía
-- Estilo consistente (línea o sólido, elegir uno)
-- Tamaño uniforme en todas las secciones
+**Comportamiento:** Aparece luego del 20% del scroll.
 
 ---
 
-## 7. Requisitos técnicos
+## 8. Decisiones de diseño estratégicas
+
+### Lo que el sitio actual hace MAL (y esta landing no debe replicar)
+Revisando las capturas de entregadelchef.com:
+
+| Sitio actual (D2C) | Esta landing (B2B) |
+|--------------------|--------------------|
+| Hero: "COMBOS A PRECIOS ESPECIALES" | Hero: propuesta de valor para restaurantes |
+| Nav con "Tienda", "Carrito" | Sin menú, sin carrito |
+| CTA: "Añadir al carrito" | CTA: "Cotizar por WhatsApp" |
+| Proceso: "Saca del congelado → para ti" | Proceso: "Pide → Recibe → Sirve en tu negocio" |
+| Testimonios de personas en dieta keto | Testimonios de restauranteros y chefs |
+| Banner: "Opciones para alimentación Keto" | Banner: "Soluciones para cocinas profesionales" |
+| Precios unitarios visibles ($5.XXX/plato) | Sin precios unitarios — cotización por volumen |
+| Facebook + Instagram prominentes | Sin redes sociales en el CTA |
+
+### Paleta aplicada a secciones
+| Sección | Fondo | Texto principal | Acento |
+|---------|-------|-----------------|--------|
+| Header | #559C33 verde | #FFFFFF blanco | — |
+| Hero | #559C33 verde o imagen | #FFFFFF blanco | #F59B1A naranja (CTA) |
+| Dolores | #DAE4CB verde claro | #000000 negro | #559C33 verde |
+| Cómo funciona | #FFFFFF blanco | #000000 negro | #F59B1A naranja |
+| Producto | #DAE4CB verde claro | #000000 negro | #559C33 verde |
+| Beneficios | #FFFFFF blanco | #000000 negro | #F59B1A naranja |
+| Prueba social | #559C33 verde | #FFFFFF blanco | #F59B1A naranja |
+| CTA principal | #F59B1A naranja | #FFFFFF blanco | — |
+| FAQ | #FFFFFF blanco | #000000 negro | #559C33 verde |
+| Footer | #000000 negro | #FFFFFF blanco | — |
+
+---
+
+## 9. Requisitos técnicos
 
 ### Performance
-- LCP (Largest Contentful Paint): < 2.5 segundos
+- LCP (Largest Contentful Paint): < 2.5s
 - CLS (Cumulative Layout Shift): < 0.1
-- FID / INP: < 100ms
-- Imágenes: formato WebP con fallback JPEG
-- JavaScript: mínimo, solo lo estrictamente necesario
+- Imágenes: WebP con fallback JPEG
+- Nada de Elementor — landing estática HTML/CSS/JS mínimo
 
-### Dispositivos objetivo
-- Móvil (iOS/Android): 65% del tráfico esperado — prioridad absoluta
-- Desktop: 35% del tráfico
-- Approach: Mobile-first en todo el diseño y desarrollo
+### Mobile-first
+- 65%+ del tráfico viene de móvil (confirmado por la estrategia de Ads)
+- El hero debe ser completamente visible sin scroll en pantalla de 390px
+- Botón de WhatsApp debe ser alcanzable con el pulgar (parte inferior de pantalla)
 
-### Analytics y tracking
-- Google Analytics 4: evento de conversión en submit del formulario
-- Google Tag Manager: implementar antes del lanzamiento
-- Google Ads: conversión vinculada al submit para optimización de campaña
-- Meta Pixel: si se van a hacer campañas de retargeting en Meta Ads
-- Hotjar o Microsoft Clarity: heatmaps y grabación de sesiones desde día 1
+### Tracking (configuración confirmada en estrategia de Ads)
+
+**Conversión 1 — Clic al botón WhatsApp (principal)**
+- En GTM: Trigger → Clic en enlace que contiene `wa.me/`
+- Tag: Conversión de Google Ads "Clic WhatsApp B2B"
+- Valor: $50.000 COP por conversión
+- Ventana: 30 días
+
+**Conversión 2 — Clic en número de teléfono**
+- Trigger: Clic en enlace `tel:` del sitio
+- Tag: Conversión Google Ads "Llamada desde landing"
+
+**GA4:**
+- Evento `generate_lead` al hacer clic en WhatsApp
+- Evento `scroll` a 25%, 50%, 75%, 100%
+
+**Herramientas de análisis:**
+- Microsoft Clarity (gratis) o Hotjar — heatmaps desde día 1
+- Activar antes del lanzamiento de Ads
 
 ### SEO
-- Meta title: "Proveedor de Insumos para Restaurantes | Entrega del Chef"
-- Meta description: "Distribuidor B2B de insumos gastronómicos con entrega puntual a tu cocina. Carnes, lácteos, verduras y más. Primera entrega en 48 horas. Sin contratos forzosos."
-- URL: `/restaurantes` o subdominio `restaurantes.entregadelchef.com`
-- Schema markup: LocalBusiness + FAQPage
-- Open Graph para compartir en redes (aunque no es el canal principal)
-
-### Formulario
-- Envío asíncrono (sin recargar la página)
-- Confirmación visual inmediata al enviar
-- Notificación en tiempo real al equipo de ventas (email + WhatsApp Business API o Zapier)
-- Almacenamiento en CRM o base de datos desde día 1
+- Meta title: `"Platos Congelados Listos para Restaurantes en Bogotá | Entrega del Chef"`
+- Meta description: `"Platos ultracongelados listos para servir en tu restaurante. Sin conservantes, sin chef especializado. +30 recetas disponibles. Cotiza por WhatsApp hoy."`
+- URL canónica: `entregadelchef.com/restaurantes`
+- Schema JSON-LD: LocalBusiness + FAQPage
+- Open Graph: imagen del producto, título y descripción B2B
 
 ---
 
-## 8. Elementos que NO debe tener esta landing
+## 10. Coherencia Ads → Landing (crítico para Quality Score)
 
-Para mantener el foco en la conversión:
+Los anuncios RSA del Grupo 1 (del documento de estrategia) usan estos mensajes:
+- "Sin Chef Especializado Necesario"
+- "Platos Listos Para Tu Restaurante"
+- "Reduce Costos De Tu Cocina"
+- "Alimentos Congelados Al Por Mayor"
+- "Cotiza Precios Mayoristas Hoy"
+- "Cadena De Frío Garantizada"
 
-- ❌ Menú de navegación completo
-- ❌ Links a redes sociales (salvo en footer)
-- ❌ Sección "Sobre nosotros" extensa
-- ❌ Blog o artículos relacionados
-- ❌ Catálogo de precios completo (lleva a parálisis de análisis)
-- ❌ Video autoreproducible con sonido
-- ❌ Pop-up de bienvenida (ya es un pop-up de conversión en sí misma)
-- ❌ Chat en vivo genérico (reemplazarlo con botón de WhatsApp específico)
-- ❌ Contadores de descuento ficticios (dañan la credibilidad en B2B)
+**Estos términos DEBEN aparecer textualmente en la landing** — en el hero o en los primeros 2 scrolls. Si el anuncio dice "Sin Chef Especializado" y la landing no menciona eso, el Quality Score baja y el CPC sube.
 
----
-
-## 9. Hipótesis de testing (post-lanzamiento)
-
-Una vez lanzada la landing, las siguientes hipótesis deben testearse en orden de impacto potencial:
-
-| # | Hipótesis | Test | Métrica |
-|---|-----------|------|---------|
-| H1 | El headline enfocado en problema convierte más que el enfocado en solución | A/B test S1 headline | CTR al formulario |
-| H2 | El formulario con 3 campos convierte más que con 5 campos | A/B test formulario | Tasa de submit |
-| H3 | Mostrar el número de teléfono del ejecutivo en el header sube conversión | A/B test header | Llamadas + formulario |
-| H4 | El botón "Hablar por WhatsApp" convierte más que "Solicitar cotización" | A/B test CTA text | Leads totales |
-| H5 | Mostrar precio de referencia (o rango) reduce el abandono | A/B test S3 | Tiempo en página + conversión |
+URL del anuncio: `entregadelchef.com/restaurantes` (o equivalente en Cloudflare Pages)
+URL display del anuncio: `entregadelchef.com/Restaurantes`
 
 ---
 
-## 10. Checklist pre-lanzamiento
+## 11. Elementos que esta landing NO debe tener
+
+- ❌ Menú de navegación (ni links al sitio D2C)
+- ❌ Carrito de compras o precios unitarios individuales
+- ❌ Testimonios de consumidores individuales keto
+- ❌ Palabras: "dieta", "keto personal", "bajar de peso", "para ti"
+- ❌ Links a redes sociales en posición prominente
+- ❌ Precios unitarios (eso atrae C2C, no B2B)
+- ❌ "Comprar ahora" como CTA (implica ecommerce individual)
+- ❌ Video con reproducción automática con sonido
+- ❌ Pop-up de bienvenida
+- ❌ Contadores regresivos o urgencia falsa
+
+---
+
+## 12. Hipótesis A/B testing (post-lanzamiento)
+
+| # | Hipótesis | Variable | Métrica |
+|---|-----------|----------|---------|
+| H1 | "Sin depender de un chef" convierte más que "Listo en 10 minutos" | Headline S1 | CTR al botón WA |
+| H2 | Mostrar precios de referencia por volumen sube conversión | S4 producto | % conversión |
+| H3 | 4 dolores > 3 dolores en la sección S2 | Número de tarjetas | Scroll depth + WA clic |
+| H4 | "Cotizar para mi restaurante" > "Cotizar por WhatsApp" | Texto del CTA | CTR botón |
+| H5 | Video de 30s del producto sube conversión vs. foto estática | Hero visual | % conversión |
+
+---
+
+## 13. Checklist pre-lanzamiento
 
 ### Contenido
-- [ ] Headline y textos revisados y aprobados
-- [ ] Testimonios reales con permiso firmado
-- [ ] Número de clientes verificado y actualizado
-- [ ] FAQ con respuestas actualizadas (cobertura, mínimos, productos)
-- [ ] Información de contacto verificada
-- [ ] Aviso de privacidad redactado y publicado
+- [ ] Headlines revisados y aprobados por el cliente
+- [ ] Testimonios B2B conseguidos y con permiso del cliente
+- [ ] Catálogo actualizado con disponibilidad real
+- [ ] Número de WhatsApp verificado y activo
+- [ ] Mensaje pre-cargado de WhatsApp probado en iOS y Android
+- [ ] FAQ con respuestas aprobadas (tiempos de entrega, mínimos, cobertura real)
 
 ### Diseño
-- [ ] Branding consistente con guía oficial
-- [ ] Imágenes propias o con licencia
-- [ ] Versión móvil aprobada
-- [ ] Versión desktop aprobada
-- [ ] CTA flotante funcionando en móvil
+- [ ] Paleta `#559C33` / `#F59B1A` aplicada correctamente
+- [ ] Logo versión blanca sobre verde en header
+- [ ] Fotos del producto (no stock genérico)
+- [ ] Versión móvil aprobada (390px y 414px)
+- [ ] Versión desktop aprobada (1280px y 1440px)
+- [ ] Botón WhatsApp flotante funcionando en móvil
 
 ### Técnico
 - [ ] LCP < 2.5s verificado con PageSpeed Insights
-- [ ] Formulario funcionando y notificaciones activas
-- [ ] GA4 con evento de conversión disparando correctamente
-- [ ] Google Ads conversion tracking verificado
-- [ ] Schema markup validado con Rich Results Test de Google
-- [ ] Meta tags revisados
-- [ ] Aviso de privacidad con CFDI vinculado (si aplica)
+- [ ] GTM instalado y triggers activos
+- [ ] Conversión "Clic WhatsApp B2B" disparando en Google Ads
+- [ ] GA4 con evento `generate_lead` activo
+- [ ] Schema FAQPage validado en Rich Results Test
+- [ ] Meta title y description revisados
+- [ ] Aviso de Privacidad en footer con link activo
 - [ ] HTTPS activo
 
-### Pre-lanzamiento Ads
-- [ ] Campaña de Google Ads configurada con la URL de esta landing
-- [ ] Extensiones de anuncio activadas
-- [ ] Audiencia de remarketing creada
-- [ ] Presupuesto diario definido
-- [ ] Conversiones vinculadas en Google Ads
+### Alineación con Ads
+- [ ] URL de destino en Google Ads apunta a esta landing (no a homepage)
+- [ ] Términos del anuncio ("sin chef", "platos listos", "cotiza") aparecen en la landing
+- [ ] Lista de keywords negativas cargada en la cuenta antes del lanzamiento
+- [ ] Conversión vinculada en Google Ads (no importada de GA4)
+- [ ] Campaña en Bogotá D.C. únicamente — Fase 1
 
 ---
 
-## 11. Personas que deben revisar y aprobar este brief
-
-| Rol | Responsabilidad en este brief |
-|-----|-------------------------------|
-| Dueño/Director | Aprobar mensajes clave, testimonios, condiciones comerciales |
-| Equipo de ventas | Validar que el flujo de leads es manejable operativamente |
-| Diseñador | Traducir el brief a wireframe y diseño visual |
-| Desarrollador | Validar requisitos técnicos y confirmar tecnología de implementación |
-| Responsable de Google Ads | Alinear mensajes de la landing con los anuncios de la campaña |
-
----
-
-*Documento estratégico — Entrega del Chef B2B | LP 01 Restaurantes*
-*Siguiente paso: Wireframe de baja fidelidad por sección*
+*Brief estratégico — Entrega del Chef B2B | LP 01 Restaurantes y Cocinas Industriales | Versión 2.0*
+*Siguiente paso: Wireframe de baja fidelidad → Diseño visual → Desarrollo HTML estático*
