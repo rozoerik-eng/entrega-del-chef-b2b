@@ -89,16 +89,35 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 });
 
 
-// ─── Product card expand/collapse ────────────
-document.querySelectorAll('.expand-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+// ─── Product card modal ───────────────────────
+(function () {
+  const modal    = document.getElementById('dishesModal');
+  const mTitle   = document.getElementById('dishesModalTitle');
+  const mGrid    = document.getElementById('dishesModalGrid');
+  const mClose   = document.getElementById('dishesClose');
+  const backdrop = document.getElementById('dishesBackdrop');
 
-    btn.setAttribute('aria-expanded', String(!expanded));
-    panel.classList.toggle('open', !expanded);
+  function openModal(btn) {
+    const card  = btn.closest('.product-card');
+    mTitle.textContent = card.querySelector('.product-name').textContent;
+    mGrid.innerHTML    = document.getElementById(btn.getAttribute('aria-controls'))
+                                 .querySelector('.dishes-grid').innerHTML;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.expand-btn').forEach(b => {
+    b.addEventListener('click', () => openModal(b));
   });
-});
+  mClose.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+})();
 
 
 // ─── Fade-in on scroll (IntersectionObserver) ─
