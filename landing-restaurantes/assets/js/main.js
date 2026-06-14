@@ -56,7 +56,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 
 // ─── Fade-in on scroll (IntersectionObserver) ─
 const fadeEls = document.querySelectorAll(
-  '.product-card, .objection-pair, .step, .testimonial-card, .cred-item, .roi-col'
+  '.product-card, .objection-pair, .step, .testimonial-card, .cred-item, .roi-col, .gallery-item'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-in'));
