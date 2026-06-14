@@ -89,6 +89,18 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 });
 
 
+// ─── Product card expand/collapse ────────────
+document.querySelectorAll('.expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+
+    btn.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open', !expanded);
+  });
+});
+
+
 // ─── Fade-in on scroll (IntersectionObserver) ─
 const fadeEls = document.querySelectorAll(
   '.product-card, .objection-pair, .step, .testimonial-card, .cred-item, .roi-col, .gallery-item'
