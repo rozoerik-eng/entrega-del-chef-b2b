@@ -473,7 +473,7 @@ h1, h2, h3, .hero-headline, .section-title {
   gap: 10px;
 }
 
-/* ─── Dish cards (dentro del modal) ─────────── */
+/* ─── Dish cards (dentro del modal) ─────────────────────── */
 .dish-item {
   background: var(--gris-claro);
   border-radius: 8px;
