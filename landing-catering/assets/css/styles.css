@@ -562,18 +562,15 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 }
 .dishes-modal-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-@media (min-width: 480px) {
-  .dishes-modal-grid { grid-template-columns: repeat(3, 1fr); }
-}
-.dish-item { display: flex; flex-direction: column; gap: 8px; }
+.dish-item { display: flex; flex-direction: column; gap: 6px; }
 .dish-item img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .dish-name { font-size: 0.83rem; font-weight: 600; color: var(--texto); text-align: center; }
 
