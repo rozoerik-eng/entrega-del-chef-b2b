@@ -1,11 +1,6 @@
 name: Deploy LP01 — Restaurantes
 
 on:
-  push:
-    branches:
-      - claude/chef-delivery-landing-setup-mqohgh
-    paths:
-      - landing-restaurantes/**
   workflow_dispatch:
 
 permissions:
@@ -24,8 +19,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout rama de desarrollo
         uses: actions/checkout@v4
+        with:
+          ref: claude/chef-delivery-landing-setup-mqohgh
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
