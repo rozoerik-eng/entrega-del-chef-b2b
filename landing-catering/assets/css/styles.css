@@ -59,10 +59,10 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 .btn-primary:hover { background: var(--amarillo-dk); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(245,200,66,.35); }
 .btn-ghost {
   background: transparent;
-  border: 2px solid rgba(255,255,255,.6);
-  color: var(--blanco);
+  border: 2px solid var(--verde);
+  color: var(--verde);
 }
-.btn-ghost:hover { border-color: var(--blanco); background: rgba(255,255,255,.1); }
+.btn-ghost:hover { border-color: var(--verde-med); background: rgba(85,156,51,.08); }
 .btn-lg { padding: 14px 28px; font-size: 1rem; }
 .btn-xl { padding: 18px 40px; font-size: 1.1rem; border-radius: 10px; }
 .btn-block { width: 100%; justify-content: center; }
@@ -112,7 +112,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 
 /* ─── Hero ───────────────────────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--verde) 0%, var(--verde-med) 60%, var(--verde-claro) 100%);
+  background: var(--blanco);
   padding: 60px 0 50px;
   overflow: hidden;
 }
@@ -138,14 +138,14 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 .hero-headline {
   font-family: var(--ff-display);
   font-size: clamp(1.85rem, 4.5vw, 3.1rem);
-  color: var(--blanco);
+  color: var(--verde);
   line-height: 1.2;
   margin-bottom: 18px;
 }
 .hero-headline .highlight { color: var(--amarillo); }
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: rgba(255,255,255,.82);
+  color: var(--texto-soft);
   margin-bottom: 32px;
   line-height: 1.65;
 }
@@ -195,7 +195,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 
 /* ─── Benefits Strip ─────────────────────────────────────────────── */
 .benefits-strip {
-  background: var(--amarillo);
+  background: var(--verde);
   padding: 20px 0;
 }
 .benefits-list {
@@ -209,7 +209,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
   align-items: center;
   gap: 8px;
   font-size: 0.92rem;
-  color: var(--verde);
+  color: var(--blanco);
   font-weight: 500;
 }
 .benefit-icon { font-size: 1.1rem; }
