@@ -994,14 +994,35 @@ h1, h2, h3, .hero-headline, .section-title {
   text-align: center;
 }
 
-.footer-logo {
+.footer-brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--blanco);
+  gap: 12px;
+}
+.footer-brand-sep {
+  width: 1px;
+  height: 34px;
+  background: rgba(255,255,255,0.4);
+}
+.footer-brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.footer-brand-top {
   font-family: 'Barlow Condensed', Arial, sans-serif;
-  font-size: 1.1rem;
   font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  color: var(--blanco);
+  text-transform: uppercase;
+}
+.footer-brand-bottom {
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
   text-transform: uppercase;
 }
 
