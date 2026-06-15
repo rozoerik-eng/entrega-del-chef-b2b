@@ -2,11 +2,11 @@
 
 /* ─── Design tokens ─────────────────────────────────────────────── */
 :root {
-  --verde:      #2D5016;
-  --verde-med:  #3D6B1F;
-  --verde-claro:#4E8A28;
-  --amarillo:   #F5C842;
-  --amarillo-dk:#D4A812;
+  --verde:      #559C33;
+  --verde-med:  #89B15F;
+  --verde-claro:#B3CB96;
+  --amarillo:   #F59B1A;
+  --amarillo-dk:#d4840d;
   --blanco:     #FFFFFF;
   --gris-bg:    #F8F6F2;
   --gris-borde: #E0DDD7;
