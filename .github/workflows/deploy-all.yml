@@ -1,0 +1,68 @@
+name: Deploy Todas las LPs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout rama de desarrollo
+        uses: actions/checkout@v4
+        with:
+          ref: claude/chef-delivery-landing-setup-mqohgh
+
+      - name: Construir sitio combinado
+        run: |
+          mkdir -p _site/restaurantes
+          mkdir -p _site/catering
+          cp -r landing-restaurantes/. _site/restaurantes/
+          cp -r landing-catering/. _site/catering/
+          cat > _site/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Entrega del Chef — Landings</title>
+            <style>
+              body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 20px; background: #f8f6f2; }
+              h1 { color: #559C33; margin-bottom: 8px; }
+              p { color: #666; margin-bottom: 32px; }
+              a { display: block; margin: 12px 0; padding: 18px 22px; background: #fff; border-radius: 10px; text-decoration: none; color: #1a1a1a; font-size: 1.05rem; border: 1px solid #e0ddd7; }
+              a:hover { border-color: #559C33; color: #559C33; }
+              .tag { font-size: 0.75rem; color: #888; display: block; margin-top: 4px; }
+            </style>
+          </head>
+          <body>
+            <h1>Entrega del Chef</h1>
+            <p>Selecciona la landing page a revisar:</p>
+            <a href="restaurantes/">LP01 — Restaurantes<span class="tag">Platos listos para servir en tu cocina</span></a>
+            <a href="catering/">LP02 — Catering & Comedores Empresariales<span class="tag">Alimentación corporativa en volumen</span></a>
+          </body>
+          </html>
+          EOF
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload sitio combinado como Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
