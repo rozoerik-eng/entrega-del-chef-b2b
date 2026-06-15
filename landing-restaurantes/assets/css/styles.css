@@ -981,8 +981,8 @@ h1, h2, h3, .hero-headline, .section-title {
    FOOTER
    ════════════════════════════════════════════════ */
 .site-footer {
-  background: #111;
-  color: #ccc;
+  background: var(--verde);
+  color: var(--blanco);
   padding: 28px 0;
 }
 
@@ -1039,8 +1039,8 @@ h1, h2, h3, .hero-headline, .section-title {
   gap: 6px;
   font-size: 0.85rem;
 }
-.footer-contact a { color: var(--verde-claro); transition: color var(--transicion); }
-.footer-contact a:hover { color: var(--verde); }
+.footer-contact a { color: rgba(255,255,255,.9); transition: color var(--transicion); }
+.footer-contact a:hover { color: var(--blanco); }
 
 .footer-legal {
   display: flex;
