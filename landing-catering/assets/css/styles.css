@@ -496,6 +496,12 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
   gap: 12px;
   text-decoration: none;
 }
+.footer-brand-img {
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 .footer-brand-sep {
   width: 1px;
   height: 34px;

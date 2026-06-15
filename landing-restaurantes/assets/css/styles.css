@@ -999,6 +999,12 @@ h1, h2, h3, .hero-headline, .section-title {
   align-items: center;
   gap: 12px;
 }
+.footer-brand-img {
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 .footer-brand-sep {
   width: 1px;
   height: 34px;
