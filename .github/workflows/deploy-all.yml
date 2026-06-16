@@ -28,8 +28,10 @@ jobs:
         run: |
           mkdir -p _site/restaurantes
           mkdir -p _site/catering
+          mkdir -p _site/hoteles-casinos
           cp -r landing-restaurantes/. _site/restaurantes/
           cp -r landing-catering/. _site/catering/
+          cp -r landing-hoteles-casinos/. _site/hoteles-casinos/
           cat > _site/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="es">
@@ -51,6 +53,7 @@ jobs:
             <p>Selecciona la landing page a revisar:</p>
             <a href="restaurantes/">LP01 — Restaurantes<span class="tag">Platos listos para servir en tu cocina</span></a>
             <a href="catering/">LP02 — Catering & Comedores Empresariales<span class="tag">Alimentación corporativa en volumen</span></a>
+            <a href="hoteles-casinos/">LP03 — Hoteles & Casinos<span class="tag">Calidad de chef. Eficiencia de proveedor.</span></a>
           </body>
           </html>
           EOF
