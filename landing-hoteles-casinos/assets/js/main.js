@@ -1,5 +1,26 @@
 /* Entrega del Chef — LP03 Hoteles & Casinos */
 
+// ─── Hero Carousel ────────────────────────────
+(function () {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots   = document.querySelectorAll('.carousel-dot');
+  if (slides.length < 2) return;
+  let current = 0, timer;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function start() { timer = setInterval(() => goTo(current + 1), 3800); }
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) start();
+  dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); goTo(i); start(); }));
+})();
+
+
 // ─── Header shadow on scroll ─────────────────
 const header = document.getElementById('site-header');
 const mobileCta = document.getElementById('mobileCta');
