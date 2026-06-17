@@ -100,6 +100,7 @@ a    { color: inherit; }
   background: #1a1a1a;
 }
 
+/* el .hero-bg ya no se usa — el carousel lo reemplaza */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -689,19 +690,23 @@ a    { color: inherit; }
 
 
 /* ─── Modal dishes grid (JS inyecta dish-items aquí) ─ */
+#dishesModalGrid,
 .dishes-modal-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   padding: 16px 0 4px;
 }
+#dishesModalGrid .dish-item img,
 .dishes-modal-grid .dish-item img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
   margin-bottom: 6px;
 }
+#dishesModalGrid .dish-name,
 .dishes-modal-grid .dish-name {
   font-size: 0.8rem;
   font-weight: 600;
@@ -711,7 +716,11 @@ a    { color: inherit; }
 
 
 /* ─── Hero Carousel ──────────────────────────── */
-.carousel { position: relative; width: 100%; height: 100%; }
+.carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 .carousel-slide {
   position: absolute;
   inset: 0;
