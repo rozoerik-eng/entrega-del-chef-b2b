@@ -670,7 +670,7 @@ h1, h2, h3, .hero-headline, .section-title {
   font-size: 0.9rem;
   line-height: 1.45;
 }
-.roi-icon { flex-shrink: 0; font-size: 1.1rem; }
+.roi-icon { flex-shrink: 0; font-size: 1.1rem; min-width: 1.6rem; text-align: center; }
 .roi-list--against .roi-icon { filter: grayscale(1); }
 .roi-list--for { color: var(--verde-oscuro); }
 
