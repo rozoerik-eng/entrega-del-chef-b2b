@@ -412,6 +412,8 @@ a    { color: inherit; }
 .objection-pair {
   border-radius: var(--radio);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .objection-q {
   background: rgba(255,255,255,.07);
@@ -428,6 +430,7 @@ a    { color: inherit; }
   color: rgba(255,255,255,.9);
   line-height: 1.6;
   border-left: 3px solid var(--verde);
+  flex: 1;
 }
 
 
