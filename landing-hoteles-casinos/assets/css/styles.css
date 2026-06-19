@@ -405,8 +405,15 @@ a    { color: inherit; }
 
 .objections-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
+  align-items: stretch;
+}
+@media (min-width: 640px) {
+  .objections-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .objections-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .objection-pair {
@@ -414,6 +421,7 @@ a    { color: inherit; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .objection-q {
   background: rgba(255,255,255,.07);
