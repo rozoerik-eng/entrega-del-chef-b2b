@@ -1001,7 +1001,7 @@ h1, h2, h3, .hero-headline, .section-title {
 }
 .footer-brand-img {
   display: block;
-  height: 44px;
+  height: 60px;
   width: auto;
   flex-shrink: 0;
 }

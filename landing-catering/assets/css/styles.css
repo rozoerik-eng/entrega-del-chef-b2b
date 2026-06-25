@@ -498,7 +498,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 }
 .footer-brand-img {
   display: block;
-  height: 44px;
+  height: 60px;
   width: auto;
   flex-shrink: 0;
 }

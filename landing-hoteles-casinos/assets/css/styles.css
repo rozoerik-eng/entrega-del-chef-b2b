@@ -57,7 +57,7 @@ a    { color: inherit; }
   text-decoration: none;
 }
 .header-brand-img {
-  height: 44px;
+  height: 60px;
   width: auto;
   flex-shrink: 0;
 }
@@ -264,9 +264,10 @@ a    { color: inherit; }
    PRODUCTS GRID
    ════════════════════════════════════════════════ */
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 }
 
 .product-card {
@@ -277,6 +278,8 @@ a    { color: inherit; }
   border: 1px solid var(--borde);
   display: flex;
   flex-direction: column;
+  flex: 1 1 240px;
+  max-width: 340px;
 }
 
 .product-img-wrap { aspect-ratio: 1 / 1; overflow: hidden; }
@@ -364,9 +367,10 @@ a    { color: inherit; }
    ROI / POR QUÉ SECTION
    ════════════════════════════════════════════════ */
 .roi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .roi-item {
@@ -375,6 +379,8 @@ a    { color: inherit; }
   padding: 28px 24px;
   border: 1px solid var(--borde);
   box-shadow: var(--sombra);
+  flex: 1 1 220px;
+  max-width: 320px;
 }
 
 .roi-icon { font-size: 2rem; margin-bottom: 12px; }
@@ -569,7 +575,7 @@ a    { color: inherit; }
   text-decoration: none;
 }
 .footer-brand-img {
-  height: 44px;
+  height: 60px;
   width: auto;
   flex-shrink: 0;
 }
