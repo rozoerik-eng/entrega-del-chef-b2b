@@ -497,9 +497,9 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
   text-decoration: none;
 }
 .footer-brand-img {
-  border-radius: 50%;
   display: block;
-  object-fit: cover;
+  height: 44px;
+  width: auto;
   flex-shrink: 0;
 }
 .footer-brand-sep {

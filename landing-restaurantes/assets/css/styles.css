@@ -1000,9 +1000,9 @@ h1, h2, h3, .hero-headline, .section-title {
   gap: 12px;
 }
 .footer-brand-img {
-  border-radius: 50%;
   display: block;
-  object-fit: cover;
+  height: 44px;
+  width: auto;
   flex-shrink: 0;
 }
 .footer-brand-sep {
